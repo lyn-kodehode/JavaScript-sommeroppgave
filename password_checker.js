@@ -36,68 +36,44 @@ const checkPasswordStrength = (enteredPassword) => {
   ) {
     result = "Too weak";
   } else {
-    if (
-      passwordArray.indexOf("&") !== -1 ||
-      passwordArray.lastIndexOf("&") !== -1
-    ) {
+    if (passwordArray.indexOf("&") !== -1) {
       uniqueSymbol++;
       //   result = `Your password has ${uniqueSymbol} unique symbol in it.`;
       result = "Medium";
-      if (
-        passwordArray.indexOf("%") !== -1 ||
-        passwordArray.lastIndexOf("%") !== -1
-      ) {
+      if (passwordArray.indexOf("%") !== -1) {
         uniqueSymbol++;
         // result = `Your password has ${uniqueSymbol} unique symbol in it.`;
         result = "Strong";
-      } else if (
-        passwordArray.indexOf("!") !== -1 ||
-        passwordArray.lastIndexOf("!") !== -1
-      ) {
+      } else if (passwordArray.indexOf("!") !== -1) {
         uniqueSymbol++;
         // result = `Your password has ${uniqueSymbol} unique symbol in it.`;
         result = "Strong";
       } else {
         return result;
       }
-    } else if (
-      passwordArray.indexOf("%") !== -1 ||
-      passwordArray.lastIndexOf("%") !== -1
-    ) {
+    } else if (passwordArray.indexOf("%") !== -1) {
       uniqueSymbol++;
       //   result = `Your password has ${uniqueSymbol} unique symbol in it.`;
       result = "Medium";
-      if (
-        passwordArray.indexOf("!") !== -1 ||
-        passwordArray.lastIndexOf("!") !== -1
-      ) {
+      if (passwordArray.indexOf("!") !== -1) {
         uniqueSymbol++;
         // result = `Your password has ${uniqueSymbol} unique symbol in it.`;
         result = "Strong";
       } else {
         return result;
       }
-    } else if (
-      passwordArray.indexOf("!") !== -1 ||
-      passwordArray.lastIndexOf("!") !== -1
-    ) {
+    } else if (passwordArray.indexOf("!") !== -1) {
       uniqueSymbol++;
       //   result = `Your password has ${uniqueSymbol} unique symbol in it.`;
       result = "Medium";
-      if (
-        passwordArray.indexOf("?") !== -1 ||
-        passwordArray.lastIndexOf("?") !== -1
-      ) {
+      if (passwordArray.indexOf("?") !== -1) {
         uniqueSymbol++;
         // result = `Your password has ${uniqueSymbol} unique symbol in it.`;
         result = "Strong";
       } else {
         return result;
       }
-    } else if (
-      passwordArray.indexOf("?") !== -1 ||
-      passwordArray.lastIndexOf("?") !== -1
-    ) {
+    } else if (passwordArray.indexOf("?") !== -1) {
       uniqueSymbol++;
       //   result = `Your password has ${uniqueSymbol} unique symbol in it.`;
       result = "Medium";
@@ -114,4 +90,5 @@ console.log(checkPasswordStrength("p&1!d"));
 console.log(checkPasswordStrength("passuiwefiuhw"));
 console.log(checkPasswordStrength("passuiwefiuhw"));
 console.log(checkPasswordStrength("passuief!uhw"));
+console.log(checkPasswordStrength("passw123&%"));
 console.log(checkPasswordStrength("&!%%suief!uhw"));
